@@ -45,18 +45,18 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/SlamDevs/slam-mirrorbot")
-    buttons.buildbutton("Channel", "https://t.me/SlamMirrorUpdates")
+    buttons.buildbutton("Contact My Master! 😉", "https://t.me/Softfreakz")
+    buttons.buildbutton("Treat Me With a Biriyani! 😋", "https://www.buymeacoffee.com/softfreakz")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive!
+I am a servant of my master SOftfreakz! can mirror all your links to my Master's Google drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         sendMarkup(
-            'Oops! not a Authorized user.\nPlease deploy your own <b>slam-mirrorbot</b>.',
+            'Oops! not a Authorized user.',
             context.bot,
             update,
             reply_markup,
@@ -130,7 +130,7 @@ help_string_telegraph = f'''<br>
 help = Telegraph(access_token=telegraph_token).create_page(
         title='Slam Mirrorbot Help',
         author_name='Slam Mirrorbot',
-        author_url='https://github.com/SlamDevs/slam-mirrorbot',
+        author_url='https://telegra.ph/Softfreakz-Mirror-Bot-Commands-07-24',
         html_content=help_string_telegraph,
     )["path"]
 
